@@ -248,14 +248,23 @@
         width:100%;
       }
     }
-
+.logo{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:20px;
+  border:4px solid rgba(255,255,255,0.3);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
   </style>
 </head>
 
 <body>
 
   <header>
-    <h1>Buses Trips</h1>
+    <img src="1000069578.jpg" class="logo">
+    <h1>Los de la corona</h1>
     <p>Algo bello, algo VIP ✈️🌴</p>
   </header>
 
@@ -266,6 +275,10 @@
 
     <button onclick="mostrarLugar('acapulco')">
       Acapulco
+    </button>
+
+    <button onclick="mostrarLugar('yucatan')">
+      Yucatán
     </button>
   </nav>
 
@@ -354,18 +367,52 @@
           </div>
         `;
       }
+      else if(lugar === "yucatan"){
+
+        info.innerHTML = `
+
+          <h2>Yucatán 🌄</h2>
+
+          <p>
+      Yucatán es uno de los estados más culturales y turísticos de México.
+      Es famoso por sus zonas arqueológicas mayas como Chichén Itzá,
+      sus cenotes naturales y la hermosa ciudad de Mérida.
+      También destaca por su gastronomía tradicional y su historia.
+          </p>
+
+          <img src="https://www.tripsavvy.com/thmb/_d7pikwxxnJ0KxlAL7S974ZqGgs=/2127x1409/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-483459092-65bffc6db2ca45e5a5907614af5a4597.jpg">
+
+          <div class="solicitud">
+
+            <h3>Haz tu solicitud ✈️</h3>
+
+            <textarea id="mensaje"
+            placeholder="Escribe aquí tu solicitud de viaje..."></textarea>
+
+            <button class="enviar" onclick="enviarCorreo()">
+              Enviar Solicitud
+            </button>
+
+          </div>
+        `;
+      }  
     }
 
     function enviarCorreo(){
 
       let mensaje = document.getElementById("mensaje").value;
 
-      let correo = "ejemplo123@gmail.com";
+      let correo = "matiextra2013@gmail.com";
+
+      let correo2= ""
 
       let asunto = "Solicitud de viaje - Buses Trips";
 
       window.location.href =
       `mailto:${correo}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(mensaje)}`;
+
+      window.location.href =
+      `mailto:${correo2}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(mensaje)}`;
 
     }
 
