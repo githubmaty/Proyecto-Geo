@@ -269,9 +269,9 @@
   </header>
 
   <nav>
-    <button onclick="mostrarLugar('quintana')">
-      Quintana Roo 
-    </button>
+<button onclick="mostrarLugar('quintana')">
+  Querétaro
+</button>
 
     <button onclick="mostrarLugar('acapulco')">
       Acapulco
@@ -304,37 +304,37 @@
 
       const info = document.getElementById("info");
 
-      if(lugar === "quintana"){
+if(lugar === "quintana"){
 
-        info.innerHTML = `
+  info.innerHTML = `
 
-          <h2>Quintana Roo 🌴</h2>
+    <h2>Querétaro 🏛️</h2>
 
-          <p>
-            Quintana Roo es uno de los estados turísticos más importantes
-            de México. Se localiza en la Península de Yucatán y es famoso
-            por sus playas de arena blanca, aguas cristalinas y zonas
-            arqueológicas mayas como Tulum.
-            También destacan Cancún y Playa del Carmen por su vida nocturna
-            y actividades acuáticas.
-          </p>
+    <p>
+      Querétaro es uno de los estados más importantes del centro de México.
+      Destaca por su gran riqueza histórica, arquitectura colonial y
+      desarrollo moderno. Su capital, Santiago de Querétaro, cuenta con un
+      hermoso centro histórico declarado Patrimonio de la Humanidad.
+      También son muy populares sus viñedos, pueblos mágicos como Bernal
+      y atractivos naturales ideales para el turismo.
+    </p>
 
-          <img src="https://th.bing.com/th/id/R.50e0a26a106a1f5aab0f1334997e6439?rik=I1WeGBfImUmiSQ&riu=http%3a%2f%2fcdn.history.com%2fsites%2f2%2f2014%2f01%2f42-16719420.jpg&ehk=RQZYVJGQ1wYnqG9%2fB%2bCPJYPXuGGF4NybGOsR%2f53MHc8%3d&risl=&pid=ImgRaw&r=0">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Acueducto_de_Quer%C3%A9taro.jpg">
 
-          <div class="solicitud">
+    <div class="solicitud">
 
-            <h3>Haz tu solicitud ✈️</h3>
+      <h3>Haz tu solicitud ✈️</h3>
 
-            <textarea id="mensaje"
-            placeholder="Escribe aquí tu solicitud de viaje..."></textarea>
+      <textarea id="mensaje"
+      placeholder="Escribe aquí tu solicitud de viaje..."></textarea>
 
-            <button class="enviar" onclick="enviarCorreo()">
-              Enviar Solicitud
-            </button>
+      <button class="enviar" onclick="enviarCorreo()">
+        Enviar Solicitud
+      </button>
 
-          </div>
-        `;
-      }
+    </div>
+  `;
+}
 
       else if(lugar === "acapulco"){
 
